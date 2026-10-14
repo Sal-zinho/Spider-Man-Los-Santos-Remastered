@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "mode": "installed",
+  "games": [
+    {
+      "slug": "gta-v",
+      "role": "primary",
+      "version": "=1.0.3889.0"
+    },
+    {
+      "slug": "marvels-spider-man-remastered",
+      "role": "companion"
+    }
+  ],
+  "components": [
+    {
+      "id": "main",
+      "fileName": "Spider-Man-Los-Santos-Remastered-0.1.0-dev-melty.zip",
+      "label": "SpiderSwing traversal prototype and source notices",
+      "kind": "main",
+      "required": true
+    }
+  ],
+  "requirements": [
+    {
+      "kind": "loader",
+      "id": "ultimate-asi-loader"
+    }
+  ],
+  "mappings": [
+    {
+      "component": "main",
+      "from": "gta/",
+      "to": "{game}"
+    },
+    {
+      "component": "main",
+      "from": "docs/",
+      "to": "{localappdata}/SpiderManLosSantos/docs"
+    },
+    {
+      "component": "main",
+      "from": "source/",
+      "to": "{localappdata}/SpiderManLosSantos/source"
+    }
+  ],
+  "together": [
+    {
+      "launch": {
+        "kind": "exe",
+        "path": "{game:marvels-spider-man-remastered}/Spider-Man.exe",
+        "args": [
+          "-scripts"
+        ]
+      },
+      "startFirst": true,
+      "waitSeconds": 5
+    }
+  ],
+  "launch": {
+    "kind": "game",
+    "args": [
+      "-nobattleye"
+    ]
+  },
+  "runtimeData": [
+    "{localappdata}/SpiderManLosSantos"
+  ],
+  "notes": {
+    "firstLaunch": "Development test draft only. Melty starts the user-installed Marvel's Spider-Man Remastered companion first with -scripts, then GTA V Legacy build 1.0.3889.0 in Story Mode. The current slice adds basic web tether traversal to GTA's current player model. This launch pairing is not yet a verified content bridge: Remastered Peter Parker models, suits, animations, sounds, and Overstrike mods do not yet drive the GTA character. Never use this mod in GTA Online."
+  }
+}

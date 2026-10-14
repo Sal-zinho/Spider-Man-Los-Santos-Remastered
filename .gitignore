@@ -1,0 +1,23 @@
+﻿# Windows / generated files
+/build/
+/release/
+/reports/
+/distribution/
+/**/obj/
+/**/obj_*/
+/**/x64/
+/**/Debug/
+/**/Release/
+/**/__pycache__/
+*.py[cod]
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.obj
+*.dll
+*.exe
+*.asi
+*.zip
+.DS_Store
+Thumbs.db
